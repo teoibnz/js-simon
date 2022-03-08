@@ -7,6 +7,15 @@
 main{
     margin-top: 150px;
 }
+
+#user-score{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 250px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
 .number-container{
     width: 80%;
     height: 150px;
@@ -24,3 +33,4 @@ main{
     line-height: 150px;
     font-size: 5rem;
 }
+
