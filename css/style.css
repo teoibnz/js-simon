@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-top: 150px;
+}
+.number-container{
+    width: 80%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.random-number{
+    height: 100%;
+    width: 10%;
+    border-radius: 50%;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 150px;
+    font-size: 5rem;
+}
