@@ -1,4 +1,4 @@
-// Descrizione:
+
 // Visualizzare in pagina 5 numeri casuali.
 let wrapper = document.querySelector('.number-container');
 
@@ -22,36 +22,40 @@ function randomInt (minValue, maxValue){
 };
 // Da lì parte un timer di 30 secondi.
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-let userNumber = [];
-let userScore = document.getElementById('user-score')
 
+
+setTimeout(userInput, 3000)
+setTimeout(clearNumbers, 2900)
+
+
+// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
+
+let userScore = document.getElementById('user-score')
 let finalScore = 0;
 
 
-function userinput (){
+function userInput (givenNumbers){
+    let userNumberBox = [];
+    let currentNumber = [];
     for ( let i = 0; i < 5; i++){
-        userNumber = parseInt(prompt("inserisci un numero"))
+        let userNumber = parseInt(prompt("inserisci un numero"))
         console.log(userNumber)
-        let userNumberBox = document.createElement('div');
+        userNumberBox = document.createElement('div');
         userNumberBox.innerHTML = userNumber;
         userNumberBox.classList.add('random-number');
         userScore.appendChild(userNumberBox)
-        if (newNumber.value === userNumberBox.value){
+        currentNumber.push(userNumber)
+        console.log(userNumberBox)
+        if (currentNumber.value == newNumber.value){
             finalScore++
-        } else {
-            console.log('Questo l\'hai toppato')
         }
-    document.getElementById('user-score').innerHTML = ' il tuo punteggio è ' + finalScore;
-
+        
+        document.getElementById('user-score').innerHTML = ' il tuo punteggio è ' + finalScore;
     }
 }
 
+
 function clearNumbers (){
     wrapper.innerHTML = '';
-
 }
-
-setTimeout(userinput, 3000)
-setTimeout(clearNumbers, 2900)
-
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
